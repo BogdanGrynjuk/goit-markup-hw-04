@@ -44,7 +44,7 @@ img {
   padding: 0;
 }
 
-.description {
+.no-margin {
   margin: 0;
 }
 
@@ -181,13 +181,18 @@ img {
 /* section hero */
 
 .hero {
+  max-width: 1600px;
+  margin: 0 auto;
   padding-top: 200px;
   padding-bottom: 200px;
-  background-image: url(../images/bg-hero.jpg);
-  background-color: rgba(47, 48, 58, 0.4);
+  background-image: linear-gradient(
+    rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/bg-hero.jpg);
   background-repeat: no-repeat;  
   background-position: center;
-  background-size: 1600px;  
+  background-size: cover;  
   text-align: center;
 }
 
@@ -238,14 +243,13 @@ img {
 }
 
 .feature-thumb {
-  background-color: var(--bg-color-section-dark);
-  margin-bottom: 30px;
-  padding: 25px 100px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;  
   border-radius: 4px;
-}
-
-.feature-icon {
-  display: block;
+  background-color: var(--bg-color-section-dark);
 }
 
 .feature-title {
@@ -298,7 +302,7 @@ img {
 }
 
 .worker-position {
-  padding-bottom: 16px;
+  margin-bottom: 16px;
 }
 
 .social-list {
@@ -306,13 +310,22 @@ img {
   justify-content: center;
 }
 
+.social-item {
+  width: 44px;
+  height: 44px;
+}
+
 .social-item:not(:last-child) {
   margin-right: 10px;  
 }
 
 .social-link {
-  display: block;
-  padding: 12px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
   border-radius: 50%;
   color: var(--icon-color);  
 }
@@ -323,8 +336,7 @@ img {
   color: var(--text-color-white);
 }
 
-.social-icon {
-  display: block;
+.social-icon {  
   fill: currentColor;
 }
 
@@ -335,13 +347,21 @@ img {
   display: flex;  
 }
 
+.clients-item {
+  width: 170px;
+  height: 92px;
+}
+
 .clients-item:not(:last-child) { 
   margin-right: 30px;  
 }
 
 .clients-link {
-  display: block;
-  padding: 15px 31px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
   border: 1px solid var(--icon-color);
   border-radius: 4px;
   color: var(--icon-color);
@@ -353,8 +373,7 @@ img {
   color: var(--accent-color);
 }
 
-.clients-icon {
-  display: block;
+.clients-icon {  
   fill: currentColor;  
 }
 
@@ -370,7 +389,7 @@ img {
 
 .page-footer > .container {
   display: flex;
-  align-items: center;
+  align-items: baseline;
 }
 
 .contacts-box {
@@ -408,6 +427,7 @@ img {
   font-weight: 700;  
   line-height: 1.14;  
   text-transform: uppercase;
+  margin-bottom: 20px;
 }
 
 .social-link--footer {
@@ -471,6 +491,7 @@ img {
 
 .project {
   display: block;
+  text-decoration: none;
 }
 
 .project:hover,
